@@ -298,6 +298,127 @@
     &lt;/div&gt;
   &lt;/div&gt;
       </code></pre>
+      <h1>Select</h1>
+      <p>
+        The most default styles of select like as input above, and the difference is select support <code>multiple</code> attribute.
+      </p>
+      <div class="form-row">
+        <div class="form-col-4">
+          <label for="constellation" class="form-label">Constellation:</label>
+        </div>
+        <div class="form-col-6">
+          <select id="constellation">
+            <option value="Libra">Libra</option>
+            <option value="Leo" selected="selected">Leo</option>
+            <option value="Aries">Aries</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-4">
+          <label for="interests" class="form-label">Interests:</label>
+        </div>
+        <div class="form-col-6">
+          <select id="interests" multiple>
+            <option value="football">football</option>
+            <option value="pingpong ball">pingpong ball</option>
+            <option value="running">running</option>
+          </select>
+        </div>
+      </div>
+      <pre><code>
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-4&quot;&gt;
+      &lt;label for=&quot;constellation&quot; class=&quot;form-label&quot;&gt;Constellation:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-6&quot;&gt;
+      &lt;select id=&quot;constellation&quot;&gt;
+        &lt;option value=&quot;Libra&quot;&gt;Libra&lt;/option&gt;
+        &lt;option value=&quot;Leo&quot; selected=&quot;selected&quot;&gt;Leo&lt;/option&gt;
+        &lt;option value=&quot;Aries&quot;&gt;Aries&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-4&quot;&gt;
+      &lt;label for=&quot;interests&quot; class=&quot;form-label&quot;&gt;Interests:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-6&quot;&gt;
+      &lt;select id=&quot;interests&quot; multiple&gt;
+        &lt;option value=&quot;football&quot;&gt;football&lt;/option&gt;
+        &lt;option value=&quot;pingpong ball&quot;&gt;pingpong ball&lt;/option&gt;
+        &lt;option value=&quot;running&quot;&gt;running&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+      </code></pre>
+      <h1>Radio</h1>
+      <div class="form-row">
+        <div class="form-col-2">
+          <label for="gender" class="form-label">Gender:</label>
+        </div>
+        <div class="form-col-3">
+          <label class="radio">
+            <input type="radio" name="gender" id="gender">
+            <span class="radio-circle"></span>
+            man
+          </label>
+          <label class="radio">
+            <input type="radio" name="gender">
+            <span class="radio-circle"></span>
+            woman
+          </label>
+        </div>
+        <div class="form-col-2">
+          <label for="work" class="form-label">Disabled:</label>
+        </div>
+        <div class="form-col-3">
+          <label class="radio">
+            <input type="radio" name="work" id="not-work" disabled="disabled">
+            <span class="radio-circle"></span>
+            Not work
+          </label>
+          <label class="radio">
+            <input type="radio" name="work">
+            <span class="radio-circle"></span>
+            Work
+          </label>
+        </div>
+      </div>
+      <pre><code>
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label for=&quot;gender&quot; class=&quot;form-label&quot;&gt;Gender:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;label class=&quot;radio&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;gender&quot;&gt;
+        &lt;span class=&quot;radio-circle&quot;&gt;&lt;/span&gt;
+        man
+      &lt;/label&gt;
+      &lt;label class=&quot;radio&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;gender&quot;&gt;
+        &lt;span class=&quot;radio-circle&quot;&gt;&lt;/span&gt;
+        woman
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label for=&quot;work&quot; class=&quot;form-label&quot;&gt;Disabled:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;label class=&quot;radio&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;work&quot; id=&quot;not-work&quot; disabled=&quot;disabled&quot;&gt;
+        &lt;span class=&quot;radio-circle&quot;&gt;&lt;/span&gt;
+        Not work
+      &lt;/label&gt;
+      &lt;label class=&quot;radio&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;work&quot;&gt;
+        &lt;span class=&quot;radio-circle&quot;&gt;&lt;/span&gt;
+        Work
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+      </code></pre>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/PeachScript/ui-vue-form">ui-vue-form</a> is maintained by <a href="https://github.com/PeachScript">PeachScript</a>.</span>
 
