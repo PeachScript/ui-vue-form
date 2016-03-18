@@ -1,3 +1,7 @@
+.form-row {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
 .form-row:before,
 .form-row:after {
   content: '';
@@ -17,7 +21,6 @@
 .form-row .form-col-9,
 .form-row .form-col-10 {
   float: left;
-  margin: 10px 0;
   min-height: 1px;
   box-sizing: border-box;
 }
@@ -65,7 +68,6 @@ input[type=month],
 input[type=search],
 input[type=number],
 input[type=password],
-input[type=datetime],
 input[type=datetime-local],
 select,
 textarea {
@@ -99,7 +101,6 @@ input[type=month]:focus,
 input[type=search]:focus,
 input[type=number]:focus,
 input[type=password]:focus,
-input[type=datetime]:focus,
 input[type=datetime-local]:focus,
 select:focus,
 textarea:focus {
@@ -124,7 +125,6 @@ input[type=month][disabled],
 input[type=search][disabled],
 input[type=number][disabled],
 input[type=password][disabled],
-input[type=datetime][disabled],
 input[type=datetime-local][disabled],
 select[disabled],
 textarea[disabled],
@@ -139,7 +139,6 @@ input[type=month][readonly],
 input[type=search][readonly],
 input[type=number][readonly],
 input[type=password][readonly],
-input[type=datetime][readonly],
 input[type=datetime-local][readonly],
 select[readonly],
 textarea[readonly] {
@@ -156,7 +155,6 @@ input[type=month][disabled],
 input[type=search][disabled],
 input[type=number][disabled],
 input[type=password][disabled],
-input[type=datetime][disabled],
 input[type=datetime-local][disabled],
 select[disabled],
 textarea[disabled] {
@@ -173,10 +171,8 @@ input[type=month],
 input[type=search],
 input[type=number],
 input[type=password],
-input[type=datetime],
 input[type=datetime-local] {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 0 5px;
   -webkit-box-shadow: 0 0 0 8px transparent, 0 1px 3px rgba(0,0,0,.1) inset;
   -moz-box-shadow: 0 0 0 8px transparent, 0 1px 3px rgba(0,0,0,.1) inset;
   -ms-box-shadow: 0 0 0 8px transparent, 0 1px 3px rgba(0,0,0,.1) inset;
