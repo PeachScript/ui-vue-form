@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="https://rawgit.com/PeachScript/ui-vue-form/master/dist/ui.vue.form.css" media="screen">
     <style>
-      .form-row *[class*=form-col-]{
+      .form-row-example *[class*=form-col-]{
+        padding: 0 5px;
         border: 1px solid #ddd;
       }
     </style>
@@ -36,7 +37,7 @@
       <p>
         <em>* Note: Cannot support nested layout.</em>
       </p>
-      <div class="form-row">
+      <div class="form-row form-row-example">
         <div class="form-col-1">form-col-1</div>
         <div class="form-col-1">form-col-1</div>
         <div class="form-col-1">form-col-1</div>
@@ -48,16 +49,16 @@
         <div class="form-col-1">form-col-1</div>
         <div class="form-col-1">form-col-1</div>
       </div>
-      <div class="form-row">
+      <div class="form-row form-row-example">
         <div class="form-col-2">form-col-2</div>
         <div class="form-col-8">form-col-8</div>
       </div>
-      <div class="form-row">
+      <div class="form-row form-row-example">
         <div class="form-col-4">form-col-4</div>
         <div class="form-col-6">form-col-6</div>
       </div>
       <pre><code>
-  &lt;div class=&quot;form-row&quot;&gt;
+  &lt;div class=&quot;form-row form-row-example&quot;&gt;
     &lt;div class=&quot;form-col-1&quot;&gt;form-col-1&lt;/div&gt;
     &lt;div class=&quot;form-col-1&quot;&gt;form-col-1&lt;/div&gt;
     &lt;div class=&quot;form-col-1&quot;&gt;form-col-1&lt;/div&gt;
@@ -69,13 +70,232 @@
     &lt;div class=&quot;form-col-1&quot;&gt;form-col-1&lt;/div&gt;
     &lt;div class=&quot;form-col-1&quot;&gt;form-col-1&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;form-row&quot;&gt;
+  &lt;div class=&quot;form-row form-row-example&quot;&gt;
     &lt;div class=&quot;form-col-2&quot;&gt;form-col-2&lt;/div&gt;
     &lt;div class=&quot;form-col-8&quot;&gt;form-col-8&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;form-row&quot;&gt;
+  &lt;div class=&quot;form-row form-row-example&quot;&gt;
     &lt;div class=&quot;form-col-4&quot;&gt;form-col-4&lt;/div&gt;
     &lt;div class=&quot;form-col-6&quot;&gt;form-col-6&lt;/div&gt;
+  &lt;/div&gt;
+      </code></pre>
+      <h1>Input</h1>
+      <p>
+        This UI component will create exquisite styles for the following types of input by default:
+        <code>tel</code>,
+        <code>url</code>,
+        <code>text</code>,
+        <code>date</code>,
+        <code>week</code>
+        <code>color</code>,
+        <code>email</code>,
+        <code>month</code>,
+        <code>search</code>,
+        <code>number</code>,
+        <code>password</code>,
+        <code>datetime-local</code>.
+        And they also has specific styles for some status such as
+        <code>focus</code>,
+        <code>disabled</code>
+        and
+        <code>readonly</code>.
+      </p>
+      <div class="form-row">
+        <div class="form-col-2">
+          <label class="form-label" for="telphone">Telephone:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="tel" id="telphone" value="18686868686">
+        </div>
+        <div class="form-col-2">
+          <label class="form-label" for="website">Website:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="url" id="website" value="http://www.google.com.hk/">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-2">
+          <label class="form-label" for="text">Text:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="text" id="text" value="ui-vue-form">
+        </div>
+        <div class="form-col-2">
+          <label class="form-label" for="search">Search:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="search" id="search" value="vue.js UI Component">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-2">
+          <label class="form-label" for="date">Date:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="date" id="date" value="2016-03-18">
+        </div>
+        <div class="form-col-2">
+          <label class="form-label" for="month">Month:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="month" id="month" value="2016-03">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-2">
+          <label class="form-label" for="week">Week:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="week" id="week" value="2016-W11">
+        </div>
+        <div class="form-col-2">
+          <label class="form-label" for="datetime-local">Datetime-local:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="datetime-local" id="datetime-local" value="2016-03-18T00:00">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-2">
+          <label class="form-label" for="number">Number:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="number" id="number" value="999">
+        </div>
+        <div class="form-col-2">
+          <label class="form-label" for="password">Password:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="password" id="password" value="nopassword">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-2">
+          <label class="form-label" for="email">Email:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="email" id="email" value="scdzwyxst@gmail.com">
+        </div>
+        <div class="form-col-2">
+          <label class="form-label" for="color">Color:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="color" id="color" value="#4fc08d">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-2">
+          <label class="form-label" for="disabled">Disabled:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="text" id="disabled" disabled="disabled" value="Cannot use">
+        </div>
+        <div class="form-col-2">
+          <label class="form-label" for="readonly">Readonly:</label>
+        </div>
+        <div class="form-col-3">
+          <input type="text" id="readonly" readonly="readonly" value="Some text">
+        </div>
+      </div>
+      <pre><code>
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;telphone&quot;&gt;Telephone:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;tel&quot; id=&quot;telphone&quot; value=&quot;18686868686&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;website&quot;&gt;Website:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;url&quot; id=&quot;website&quot; value=&quot;http://www.google.com.hk/&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;text&quot;&gt;Text:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;text&quot; id=&quot;text&quot; value=&quot;ui-vue-form&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;search&quot;&gt;Search:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;search&quot; id=&quot;search&quot; value=&quot;vue.js UI Component&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;date&quot;&gt;Date:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;date&quot; id=&quot;date&quot; value=&quot;2016-03-18&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;month&quot;&gt;Month:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;month&quot; id=&quot;month&quot; value=&quot;2016-03&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;week&quot;&gt;Week:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;week&quot; id=&quot;week&quot; value=&quot;2016-W11&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;datetime-local&quot;&gt;Datetime-local:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;datetime-local&quot; id=&quot;datetime-local&quot; value=&quot;2016-03-18T00:00&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;number&quot;&gt;Number:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;number&quot; id=&quot;number&quot; value=&quot;999&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;password&quot; id=&quot;password&quot; value=&quot;nopassword&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;email&quot; id=&quot;email&quot; value=&quot;scdzwyxst@gmail.com&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;color&quot;&gt;Color:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;color&quot; id=&quot;color&quot; value=&quot;#4fc08d&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-row&quot;&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;disabled&quot;&gt;Disabled:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;text&quot; id=&quot;disabled&quot; disabled=&quot;disabled&quot; value=&quot;Cannot use&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-2&quot;&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;readonly&quot;&gt;Readonly:&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-col-3&quot;&gt;
+      &lt;input type=&quot;text&quot; id=&quot;readonly&quot; readonly=&quot;readonly&quot; value=&quot;Some text&quot;&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
       </code></pre>
       <footer class="site-footer">
