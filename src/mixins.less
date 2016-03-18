@@ -1,0 +1,22 @@
+.border-radius(@value){
+  -webkit-border-radius: @value;
+  -moz-border-radius: @value;
+  -ms-border-radius: @value;
+  border-radius: @value;
+}
+.box-shadow(@value){
+  -webkit-box-shadow: @value;
+  -moz-box-shadow: @value;
+  -ms-box-shadow: @value;
+  box-shadow: @value;
+}
+.transition(@value){
+  -webkit-transition: @value;
+  -moz-transition: @value;
+  -ms-transition: @value;
+  transition: @value;
+}
+.opacity(@value){
+  filter: ~'alpha(opacity=@{value})';
+  opacity: @value/100;
+}

@@ -3,8 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <title>ui-vue-form example</title>
+  <style>
+    .container{
+      width: 1000px;
+      margin: 40px auto;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <form novalidate>
+      <div class="form-row">
+        <div class="form-col-3">
+          <label for="username" class="form-label">用户名：</label>
+        </div>
+        <div class="form-col-7">
+          <input type="text" id="username">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-3">
+          <label for="password" class="form-label">密码：</label>
+        </div>
+        <div class="form-col-7">
+          <input type="password" id="password">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-3">
+          <label for="password-again" class="form-label">重复密码：</label>
+        </div>
+        <div class="form-col-7">
+          <input type="password" id="password-again">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-3">
+          <label for="gender" class="form-label">性别：</label>
+        </div>
+        <div class="form-col-7">
+          <label class="radio">
+            <input type="radio" name="gender" id="gender">
+            <span class="radio-circle"></span>
+            男
+          </label>
+          <label class="radio">
+            <input type="radio" name="gender">
+            <span class="radio-circle"></span>
+            女
+          </label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-3">
+          <label for="constellation" class="form-label">星座：</label>
+        </div>
+        <div class="form-col-7">
+          <select id="constellation">
+            <option value="">天秤座</option>
+            <option value="">狮子座</option>
+            <option value="">白羊座</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-col-3">
+          <label for="character" class="form-label">主要性格：</label>
+        </div>
+        <div class="form-col-7">
+          <select id="character" multiple="multiple">
+            <option value="">温柔</option>
+            <option value="">暴躁</option>
+            <option value="">细腻</option>
+            <option value="">多变</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
   <script src="/build/main.js"></script>
 </body>
 </html>
