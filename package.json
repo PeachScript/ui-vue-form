@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --quiet --config webpack.config.js"
+    "dev": "webpack-dev-server --quiet --config webpack.config.js",
+    "build": "lessc ./src/ui.vue.form.less ./dist/ui.vue.form.css"
   },
   "repository": {
     "type": "git",
