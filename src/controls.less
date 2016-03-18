@@ -79,7 +79,6 @@ select{
   padding-right: 10px;
   color: #666;
   vertical-align: middle;
-  cursor: pointer;
   input[type=radio]{
     position: absolute;
     top: 2px;
@@ -87,13 +86,18 @@ select{
     margin: 0;
     .opacity(0);
     cursor: pointer;
-    &:checked + .radio-circle{
+    &:checked ~ .radio-circle{
       border-width: @circle-size/3;
       border-color: @c-focus-border;
     }
     &:focus ~ .radio-circle{
       .transition(~'border-width .2s, box-shadow .5s');
       .box-shadow(0 0 0 2px fadeout(@c-focus-border, 60%));
+    }
+    &[disabled] ~ .radio-circle,
+    &[readonly] ~ .radio-circle{
+      .opacity(50);
+      cursor: not-allowed;
     }
   }
   .radio-circle{
@@ -109,8 +113,14 @@ select{
     .transition(~'border-width @{a-border-change} .1s, border-color .3s');
   }
   &:hover{
-    .radio-circle{
-      border-color: @c-focus-border;
+    input[type=radio]{
+      &[disabled] ~ .radio-circle,
+      &[readonly] ~ .radio-circle{
+        border-color: @c-default-border;
+      }
+      ~ .radio-circle{
+        border-color: @c-focus-border;
+      }
     }
   }
 }

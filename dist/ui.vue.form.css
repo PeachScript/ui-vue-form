@@ -191,7 +191,6 @@ select[multiple] {
   padding-right: 10px;
   color: #666;
   vertical-align: middle;
-  cursor: pointer;
 }
 .radio input[type=radio] {
   position: absolute;
@@ -202,7 +201,7 @@ select[multiple] {
   opacity: 0;
   cursor: pointer;
 }
-.radio input[type=radio]:checked + .radio-circle {
+.radio input[type=radio]:checked ~ .radio-circle {
   border-width: 6px;
   border-color: #4fc08d;
 }
@@ -215,6 +214,12 @@ select[multiple] {
   -moz-box-shadow: 0 0 0 2px rgba(79, 192, 141, 0.4);
   -ms-box-shadow: 0 0 0 2px rgba(79, 192, 141, 0.4);
   box-shadow: 0 0 0 2px rgba(79, 192, 141, 0.4);
+}
+.radio input[type=radio][disabled] ~ .radio-circle,
+.radio input[type=radio][readonly] ~ .radio-circle {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .radio .radio-circle {
   display: inline-block;
@@ -237,7 +242,11 @@ select[multiple] {
   -ms-transition: border-width cubic-bezier(0.215, 0.61, 0.355, 1) .1s, border-color .3s;
   transition: border-width cubic-bezier(0.215, 0.61, 0.355, 1) .1s, border-color .3s;
 }
-.radio:hover .radio-circle {
+.radio:hover input[type=radio][disabled] ~ .radio-circle,
+.radio:hover input[type=radio][readonly] ~ .radio-circle {
+  border-color: #ccc;
+}
+.radio:hover input[type=radio] ~ .radio-circle {
   border-color: #4fc08d;
 }
 .form-label {
